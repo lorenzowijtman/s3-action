@@ -53,7 +53,7 @@ export default class S3 {
         accessKeyId: this.accessKey
       });
 
-    const endpointOverride = this.useWasabi ? 'https://s3.wasabisys.com' : this.endpoint;
+    const endpointOverride = this.useWasabi ? this.endpoint ?? 'https://s3.wasabisys.com' : this.endpoint;
 
     core.debug(`Created S3 client${endpointOverride !== '' ? ', with Wasabi!' : '.'}`);
     return new S3Client({
