@@ -34,8 +34,8 @@ export default class S3 {
     private secretKey: string,
     private bucket: string,
     private useWasabi: boolean = true,
-    private region: string = 'us-east-1',
-    private endpoint: string = ''
+    private region: string = 'eu-central-1',
+    private endpoint: string = '',
   ) {
     this.client = this.createS3Client();
   }
